@@ -1,0 +1,101 @@
+# ============================================================
+# STRICT: exclude ALL data — public health / clinical datasets
+# Only source code and documentation may be committed.
+# ============================================================
+
+# --- Data directories (raw, processed, backups, shards) ---
+all_processed_data/
+all _old_process_data/
+archive/
+backup_*/
+extracted_vocabulary_metadata/
+mimic_cxr_raw_data/
+mimic-cxr_raw_original/
+mimic_original_shards/
+mimic_raw_backup/
+mimic_raw_image_text/
+raw_data_ReXGradient-160K/
+reXgra_data/
+step1_processed_data/
+test_indiana_mimic/
+
+# Catch-all for data-like dirs
+**/raw*/
+**/processed*/
+**/shards*/
+**/backup*/
+
+# --- Binary / media / tabular data artifacts ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.dcm
+*.dicom
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+
+# --- Large / generated JSON (vocab, analysis, results) ---
+*_vocab*.json
+*_index_word.json
+*_stats.json
+*analysis*.json
+*comparison*.json
+*coverage*.json
+*results*.json
+*difficulty*.json
+mimic_*.json
+study_data_*.csv
+
+# Keep small config JSON if any appear later (explicit allow none by default)
+
+# --- Logs and caches ---
+*.log
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- Env / secrets / IDE ---
+.env
+.env.*
+*.pem
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Text report dumps (regenerable) ---
+*_results.txt
+*_report.txt
+cross_check_results.txt
+quick_cross_check_results.txt
+dataset_comparison_report.txt
+training_difficulty_analysis_report.txt
+vocabulary_size_impact_report.txt
